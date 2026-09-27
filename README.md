@@ -1,4 +1,4 @@
-# Trailhead — Vehicle Maintenance Tracker
+# Vehicle Maintenance Tracker
 
 A full-stack maintenance tracker for keeping service schedules, component lifecycles, mileage, and service history in one place. Optional AI insights turn the tracked history into plain-language maintenance guidance.
 
