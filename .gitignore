@@ -1,0 +1,29 @@
+# Dependencies and generated builds
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+frontend/dist/
+
+# Local application data and credentials
+.env
+.env.*
+!.env.example
+*.db
+*.db-*
+
+# One-time imports and utilities containing personal vehicle history
+backend/categorize-history.js
+backend/combine-brakes.js
+backend/fix-brake-records.mjs
+backend/import-additional-history.js
+backend/import-components.js
+backend/import-maintenance.js
+backend/match-history.js
+backend/remove-duplicates.js
+backend/update-car-info.js
+backend/src/import-history.js
+
+# Editor and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db

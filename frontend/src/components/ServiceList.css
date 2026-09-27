@@ -1,0 +1,191 @@
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.no-services {
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-light);
+  font-size: 16px;
+}
+
+.service-card {
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  transition: all 0.3s;
+}
+
+.service-card.status-overdue {
+  border-color: var(--danger);
+  background: rgba(239, 68, 68, 0.05);
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.1);
+}
+
+.service-card.status-due-soon {
+  border-color: var(--warning);
+  background: rgba(245, 158, 11, 0.05);
+}
+
+.service-card.status-ok {
+  border-color: var(--success);
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-info h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 12px;
+  font-weight: 600;
+}
+
+.service-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 15px;
+}
+
+.service-progress-bar {
+  position: relative;
+  width: 100%;
+  height: 16px;
+  background: var(--border);
+  border-radius: 8px;
+  margin: 8px 0 0 0;
+  overflow: hidden;
+}
+.service-progress-fill {
+  height: 100%;
+  border-radius: 8px;
+  transition: width 0.4s cubic-bezier(.4,2,.6,1);
+}
+.service-progress-label {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 11px;
+  color: #fff;
+  font-weight: 700;
+  text-shadow: 0 1px 4px rgba(0,0,0,0.4);
+  pointer-events: none;
+}
+
+.detail {
+  color: var(--text-light);
+  font-size: 14px;
+}
+
+.detail strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.notes {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+  color: var(--text-light);
+  font-size: 14px;
+  font-style: italic;
+}
+
+.service-status {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-end;
+  min-width: 160px;
+}
+
+.status-badge {
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-align: center;
+  min-width: 140px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: 2px solid;
+}
+
+.status-badge.overdue {
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  border-color: #ef4444;
+}
+
+.status-badge.due-soon {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fcd34d;
+  border-color: #f59e0b;
+}
+
+.status-badge.ok {
+  background: rgba(16, 185, 129, 0.2);
+  color: #6ee7b7;
+  border-color: #10b981;
+}
+
+.btn-complete,
+.btn-edit {
+  background: var(--primary);
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 100px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.btn-complete:hover,
+.btn-edit:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+@media (max-width: 768px) {
+  .service-card {
+    flex-direction: column;
+  }
+
+  .service-status {
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .status-badge {
+    width: 100%;
+  }
+
+  .btn-complete {
+    width: 100%;
+  }
+
+  .btn-edit {
+    width: 100%;
+  }
+}
